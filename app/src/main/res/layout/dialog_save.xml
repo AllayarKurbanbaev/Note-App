@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_dialog"
+    android:padding="@dimen/padding_middle">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_middle"
+        android:padding="8dp"
+        android:src="@drawable/ic_baseline_warning_24"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_middle"
+        android:gravity="center"
+        android:text="@string/text_save_changes"
+        android:textColor="#BFFFFFFF"
+        android:textSize="@dimen/dialog_title_text_size"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/discardButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_standard"
+        android:layout_marginVertical="@dimen/margin_standard"
+        android:background="@drawable/shape_discard_button"
+        android:gravity="center"
+        android:paddingVertical="@dimen/padding_standard"
+        android:text="@string/text_discard"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_standard"
+        app:layout_constraintEnd_toStartOf="@id/saveButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_standard"
+        android:background="@drawable/shape_save_button"
+        android:gravity="center"
+        android:padding="@dimen/padding_standard"
+        android:text="@string/text_save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_standard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/discardButton"
+        app:layout_constraintTop_toTopOf="@id/discardButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

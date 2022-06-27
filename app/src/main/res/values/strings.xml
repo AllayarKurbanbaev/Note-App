@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NoteAppAllayar</string>
+
+
+    <string name="bottom_nav_note">Note</string>
+    <string name="bottom_nav_task">Task</string>
+    <string name="title_note">Notes</string>
+    <string name="text_save_changes">Save changes?</string>
+    <string name="text_discard">Discard</string>
+    <string name="text_save">Save</string>
+    <string name="text_keep">Keep</string>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.noteappallayar.presentation.ui.screens.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.noteappallayar.presentation.ui.screens.MainScreen"
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_detailScreen"
+            app:destination="@id/detailScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_addScreen"
+            app:destination="@id/addScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailScreen"
+        android:name="uz.gita.noteappallayar.presentation.ui.screens.DetailScreen"
+        android:label="DetailScreen" >
+        <action
+            android:id="@+id/action_detailScreen_to_editScreen"
+            app:destination="@id/editScreen"
+            app:popUpTo="@id/detailScreen"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="pos"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/addScreen"
+        android:name="uz.gita.noteappallayar.presentation.ui.screens.AddScreen"
+        android:label="AddScreen" />
+    <fragment
+        android:id="@+id/editScreen"
+        android:name="uz.gita.noteappallayar.presentation.ui.screens.EditScreen"
+        android:label="EditScreen" >
+        <action
+            android:id="@+id/action_editScreen_to_detailScreen"
+            app:destination="@id/detailScreen"
+            app:popUpTo="@id/editScreen"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="pos"
+            app:argType="integer" />
+    </fragment>
+</navigation>
